@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>practice 30</title>
+</head>
+<body>
+    
+    <script>
+        function randomRange (startNum, endNum) {
+            var randomNumber;
+            if (Array.isArray(startNum)) {
+                if(startNum[1] > startNum[0]) {
+                    randomNumber = Math.floor(Math.random()*(startNum[1]-startNum[0]) + startNum[0]);
+                    console.log(randomNumber);
+                } else if (startNum[1] < startNum[0]){
+                    randomNumber = Math.floor(Math.random()*(startNum[0]-startNum[1]) + startNum[1]);
+                    console.log(randomNumber);
+                } else if (startNum[1] === startNum[0]) {
+                    console.log("cannot get random number between " + startNum[1] + " and " + endNum[0]);
+                };
+            } else if (startNum === endNum) {
+                console.log("cannot get random number between " + startNum + " and " + endNum);
+            }
+            else {
+                randomNumber = Math.floor(Math.random()*(endNum - startNum) + startNum);
+                console.log(randomNumber);
+            };
+        }
+    </script>
+</body>
+</html>
